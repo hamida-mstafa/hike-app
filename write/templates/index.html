@@ -1,0 +1,11 @@
+<h1>write your objectives</h1>
+<ul>
+    {% for object in objects %}
+    <li>{{ objects.content }}</li>
+    {% endfor %}
+</ul>
+
+<form action="/addwrite/" method="post" > {% csrf_token %}
+<input type="text" name= "add">
+<input type="submit" value="add"> 
+</form>
